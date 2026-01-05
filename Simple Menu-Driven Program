@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int choice;
+    float n1, n2;
+
+    
+    printf("1.Add 2.Sub 3.Mul 4.Div\nChoose (1-4): ");
+    scanf("%d", &choice);
+
+    if (choice < 1 || choice > 4) {
+        printf("Invalid choice!\n");
+        return 1; 
+    }
+
+    printf("Enter two numbers: ");
+    scanf("%f %f", &n1, &n2);
+
+    switch (choice) {
+        case 1: printf("Result: %.2f\n", n1 + n2); break;
+        case 2: printf("Result: %.2f\n", n1 - n2); break;
+        case 3: printf("Result: %.2f\n", n1 * n2); break;
+        case 4: 
+            if(n2 != 0) printf("Result: %.2f\n", n1 / n2);
+            else printf("Cannot divide by zero!\n");
+            break;
+    }
+
+    return 0;
+}
