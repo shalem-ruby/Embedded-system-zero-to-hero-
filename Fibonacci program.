@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int i, n;
+    int t1 = 0, t2 = 1; // Initialize first two terms
+    int nextTerm;
+
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Series: ");
+
+    for (i = 1; i <= n; ++i) {
+        printf("%d, ", t1); // Print the current term
+        
+        // Calculate the next term
+        nextTerm = t1 + t2;
+        
+        // Shift values for the next loop iteration
+        t1 = t2;
+        t2 = nextTerm;
+    }
+
+    return 0;
+}
