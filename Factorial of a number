@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    unsigned long long fact = 1; // Use 'long long' for larger numbers
+
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+
+    // Error check for negative numbers
+    if (n < 0) {
+        printf("Error! Factorial of a negative number doesn't exist.");
+    } else {
+        // Loop from 1 to n
+        for (i = 1; i <= n; ++i) {
+            fact = fact * i;
+        }
+        printf("Factorial of %d = %llu", n, fact);
+    }
+
+    return 0;
+}
